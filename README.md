@@ -1,0 +1,1 @@
+Guia de ejercicios propuestos en la catedra de topicos de programacion en la universidad nacional de la matanza, la guia se va a subir completa al repositorio y voy a ir agregando comentarios por si a alguna otra persona le sirve de guia para hacer la misma
