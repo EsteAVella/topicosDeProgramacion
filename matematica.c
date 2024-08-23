@@ -149,5 +149,72 @@ int producto( int num, int num2){
 
 //Ejercicio 9_
 
+float cociente( int dv, int ds){
+    float res = 0;
 
 
+
+    return res;
+}
+
+//Ejercicio 10_
+
+int sumaNNumeros( int num ){
+    int acum = 0;
+
+    for( int i = num; i>0 ; i--){
+        acum+= i;
+    }
+    return acum;
+}
+
+//Ejercicio 11_
+
+int sumaNNumerosPares( int num ){
+    int acum = 0;
+    int j = 0;
+    int i = 1;
+    do{
+        if( (i % 2) == 0){
+        acum+= i;
+        j++;
+        }
+        i++;
+    }while( j < num);
+    return acum;
+}
+
+//Ejercicio 12_
+
+int numParesMen( int num ){
+    int acum = 0;
+    int j = 0;
+    int i = 1;
+    do{
+        if( (i % 2) == 0 && i < num){
+        acum+= i;
+        j++;
+        }
+        i++;
+    }while( i < num);
+    return acum;
+}
+
+//Ejercicio 13_
+
+int esPrimo (int num){
+    int j = 0;
+    int i = 1;
+    do{
+        if( ( num % i ) == 0){
+        j++;
+        }
+        i++;
+    }while( i <= num || j < 1 );
+
+    if( j == 2 ){
+        return 1;
+    } else{
+        return -1;
+    }
+}
