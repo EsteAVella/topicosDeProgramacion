@@ -5,7 +5,7 @@
 
 int main()
 {
-    int vec[TAM] = {2,3,3,4,6};
+    int vec[TAM] = {2,3,3,6,8};
     unsigned ce = 5;
     int* pv = vec;
     int num = 3;

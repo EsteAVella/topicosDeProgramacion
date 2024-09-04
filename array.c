@@ -123,11 +123,12 @@ int eliminarApariciones (int* vec, int num, unsigned* ce){
 
         while( (*pl == num) && pl < fin ){
             pl ++;
+            *ce -= 1;
         }
 
         if(*vec == num){
             *vec = *pl;
-            *ce -= 1;
+
         }
 
         vec++;
