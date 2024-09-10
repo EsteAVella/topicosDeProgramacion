@@ -2,20 +2,22 @@
 #include <stdlib.h>
 #include "matematica.h"
 #include "array.h"
+#include "matrices.h"
+#define MAX_FIL 50
+#define MAX_COL 50
 
 int main()
 {
-    int vec[TAM] = {2,3,3,6,8};
-    unsigned ce = 5;
-    int* pv = vec;
-    int num = 3;
-//    int pos = 2;
+    unsigned cf = 3;
+    unsigned cc = 3;
 
-    printf(" El siguiente vector es el original: \n");
-    mostrarVec(pv,&ce);
-    printf("\n Agregamos el numero: %d en orden y queda el siguiente vector: \n",num);
-    printf("\n El array de retorno despues del delete poss: %d \n",eliminarApariciones(pv,num,&ce));
-    mostrarVec(pv,&ce);
+    int mat[MAX_FIL][MAX_COL] = {     {1,1,1},
+                                      {2,1,1},
+                                      {2,2,1}
+                                };
+    mostrarMatriz(mat, cf, cc);
+
+    printf("la suma inferior de la matriz m es: %d", sumaInferior(mat,cf,cc));
 
     return 0;
 }

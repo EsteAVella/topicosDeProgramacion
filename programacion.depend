@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1725167692 source:/home/esteban/workspace/programacion/main.c
+1725481294 source:/home/esteban/workspace/programacion/main.c
 	<stdio.h>
 	<stdlib.h>
 	"matematica.h"
 	"array.h"
+	"matrices.h"
 
 1724383043 /home/esteban/workspace/programacion/matematica.h
 	"matematica.c"
@@ -16,6 +17,12 @@
 1725166609 /home/esteban/workspace/programacion/array.h
 	"array.c"
 
-1725168525 /home/esteban/workspace/programacion/array.c
+1725477505 /home/esteban/workspace/programacion/array.c
 	"array.h"
+
+1725481308 /home/esteban/workspace/programacion/matrices.h
+	"matrices.c"
+
+1725481522 /home/esteban/workspace/programacion/matrices.c
+	"matrices.h"
 

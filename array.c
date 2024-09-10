@@ -137,3 +137,5 @@ int eliminarApariciones (int* vec, int num, unsigned* ce){
 
     return 1;
 }
+
+

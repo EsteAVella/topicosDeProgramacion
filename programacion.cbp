@@ -48,6 +48,13 @@
 		<Unit filename="matematica.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="matrices.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="matrices.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
