@@ -5,6 +5,9 @@
 //auxiliares =>
 
 int mostrarVec(int* pv, unsigned* ce);
+int esLetra(char letra);
+char aMin(char letra);
+char aMayusc(char letra);
 
 //EJERCICIOS
 
@@ -13,5 +16,9 @@ int insertarOrdenado (int* vec, int num, unsigned* ce);
 int eliminarPoss( int* vec, int poss, unsigned* ce);
 int eliminarPrimero (int* vec, int num, unsigned* ce);
 int eliminarApariciones (int* vec, int num, unsigned* ce);
+
+int mStrLen(char* orig);
+char* mstrCat(char* dest, const char *ori);
+
 
 #endif // ARRAY_H_INCLUDED

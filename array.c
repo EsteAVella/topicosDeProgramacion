@@ -1,5 +1,6 @@
 #include "array.h"
 
+//aux
 int mostrarVec(int* pv,unsigned* ce){
 
     printf("\n{");
@@ -11,6 +12,30 @@ int mostrarVec(int* pv,unsigned* ce){
     return 1;
 }
 
+int esLetra(char letra){
+
+    if( (letra > 65 && letra < 90) || (letra > 97 && letra < 122) ){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+char aMin(char letra){
+
+    if(letra > 65 && letra < 90){
+        return letra + 32;
+    }
+    return letra;
+}
+
+char aMayusc(char letra){
+
+    if(letra > 97 && letra < 122){
+        return letra - 32;
+    }
+    return letra;
+}
 // Ejercicio 1.1
 
 int insertarPorPosicion(int vec[], int num, unsigned* ce, int pos){
@@ -138,4 +163,35 @@ int eliminarApariciones (int* vec, int num, unsigned* ce){
     return 1;
 }
 
+//ARRAY PERO CHAR
 
+int mStrLen(char* orig){
+
+    int cant = 0;
+
+    while(*orig){
+        orig++;
+        //falta es letra
+        cant++;
+    }
+
+    return cant;
+}
+
+char* mstrCat(char* dest, const char * ori){
+    char* ini = dest;
+
+    while(*dest){
+        dest++;
+    }
+
+    while(*ori){
+        *dest = *ori;
+        dest++;
+        ori++;
+    }
+
+    *dest = '\0';
+
+    return ini;
+}

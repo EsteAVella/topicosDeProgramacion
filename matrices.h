@@ -9,5 +9,6 @@ int esIdentidad(int mat[][MAX_COL], unsigned cf, unsigned cc);
 int trazaDeMatriz(int mat[][MAX_COL], unsigned cf, unsigned cc);
 int sumaSuperior(int mat[][MAX_COL], unsigned cf, unsigned cc);
 int sumaInferior(int mat[][MAX_COL], unsigned cf, unsigned cc);
+int matrizDiagonal(int mat[][MAX_COL], unsigned cf, unsigned cc);
 
 #endif // MATRICES_H_INCLUDED
