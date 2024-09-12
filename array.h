@@ -1,7 +1,9 @@
+#include <string.h>
 #ifndef ARRAY_H_INCLUDED
 #define ARRAY_H_INCLUDED
 #define TAM 5
 #include "array.c"
+
 //auxiliares =>
 
 int mostrarVec(int* pv, unsigned* ce);
@@ -19,6 +21,6 @@ int eliminarApariciones (int* vec, int num, unsigned* ce);
 
 int mStrLen(char* orig);
 char* mstrCat(char* dest, const char *ori);
-
+int esPalindromo(char* palabra);
 
 #endif // ARRAY_H_INCLUDED

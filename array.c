@@ -1,5 +1,6 @@
 #include "array.h"
 
+
 //aux
 int mostrarVec(int* pv,unsigned* ce){
 
@@ -14,7 +15,7 @@ int mostrarVec(int* pv,unsigned* ce){
 
 int esLetra(char letra){
 
-    if( (letra > 65 && letra < 90) || (letra > 97 && letra < 122) ){
+    if( (letra >= 65 && letra <= 90) || (letra >= 97 && letra <= 122) ){
         return 1;
     } else {
         return 0;
@@ -23,7 +24,7 @@ int esLetra(char letra){
 
 char aMin(char letra){
 
-    if(letra > 65 && letra < 90){
+    if(letra >= 65 && letra <= 90){
         return letra + 32;
     }
     return letra;
@@ -31,7 +32,7 @@ char aMin(char letra){
 
 char aMayusc(char letra){
 
-    if(letra > 97 && letra < 122){
+    if(letra >= 97 && letra <= 122){
         return letra - 32;
     }
     return letra;
@@ -195,3 +196,28 @@ char* mstrCat(char* dest, const char * ori){
 
     return ini;
 }
+
+
+int esPalindromo(char* palabra){
+
+    char* ini = palabra;
+    char* fin = palabra + strlen(palabra)-1;
+
+    while(ini < fin){
+        if(!esLetra(*ini)){
+            ini ++;
+        } else if ( !esLetra(*fin)){
+            fin--;
+        } else {
+            if(*ini != *fin){
+                return 0;
+            }
+        ini++;
+        fin--;
+        }
+    }
+
+    return 1;
+}
+
+

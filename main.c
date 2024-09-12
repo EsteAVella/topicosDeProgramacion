@@ -9,10 +9,10 @@
 
 int main()
 {
-    char cad1[MAXA] = "hola";
+    char cad1[MAXA] = "arriba la birra    ";
     //char cad2[] = " mundo";
 
-    printf("%d",mStrLen(cad1));
+    printf("%d",esPalindromo(cad1));
 
     return 0;
 }
