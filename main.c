@@ -9,10 +9,11 @@
 
 int main()
 {
-    char cad1[MAXA] = "arriba la birra    ";
+    char cad1[MAXA] = "hola";
+    char* palabra = "hola";
     //char cad2[] = " mundo";
-
-    printf("%d",esPalindromo(cad1));
+    //char* h = proximaPalabra(cad1);
+    printf("%d\n",mStrcmp(cad1,palabra));
 
     return 0;
 }

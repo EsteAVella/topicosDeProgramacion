@@ -37,6 +37,27 @@ char aMayusc(char letra){
     }
     return letra;
 }
+
+char* saltarEspacios(char* frase){
+
+    if(!(*frase)) return NULL;
+
+    while(!esLetra(*frase) && *frase){
+        frase++;
+    }
+    return frase;
+}
+
+char* saltarLetras(char* frase){
+    if(!(*frase)) return NULL;
+
+    while(esLetra(*frase)){
+        frase ++;
+    }
+    return frase;
+}
+
+
 // Ejercicio 1.1
 
 int insertarPorPosicion(int vec[], int num, unsigned* ce, int pos){
@@ -197,7 +218,21 @@ char* mstrCat(char* dest, const char * ori){
     return ini;
 }
 
+int mStrcmp(const char* cad1, const char* cad2){
+// Caso ideal 0  | ambas cadenas son iguales
+// Caso positivo | cad1 es mas grande que cad2
+// Caso negativo | cad1 es menor que cad2
+    while(*cad1 && *cad2){
+        if(*cad1 != *cad2){
+            return *cad1-*cad2;
+        }
+        cad1++;
+        cad2++;
+    }
+    return *cad1 - *cad2;
+}
 
+//Ejercicio 1.6
 int esPalindromo(char* palabra){
 
     char* ini = palabra;
@@ -220,4 +255,58 @@ int esPalindromo(char* palabra){
     return 1;
 }
 
+//Ejercicio 1.7
+int valorPalabra(char* palabra){
+
+    int cant = 0;
+
+    while(*palabra){
+
+        if(esLetra(*palabra)){
+            cant += *palabra;
+        }
+        palabra++;
+    }
+
+    return cant;
+}
+
+//Ejercicio 1.8
+int contarApariciones(char* cad, char* palabra){
+    int cant = 0;
+
+    while(*cad){
+
+        if(*cad == *palabra){
+            return 0;
+        }
+        cad++;
+    }
+
+
+    return cant;
+}
+
+char* proximaPalabra(char *frase) {
+    // Saltar los espacios iniciales
+    frase = saltarEspacios(frase);
+    if (!*frase) return NULL;  // Si no hay más palabras, retornamos NULL
+
+    // Este es el inicio de la palabra
+    char *inicio = frase;
+
+    // Saltamos las letras de la palabra
+    frase = saltarLetras(frase);
+
+    // Si no es el final del string, terminamos la palabra actual con un '\0'
+    if (*frase) {
+        *frase = '\0';  // Cortamos la palabra actual
+        frase++;        // Avanzamos al próximo caracter
+    }
+
+    // Retornamos el inicio de la palabra encontrada
+    return inicio;
+}
+
+//void* _memcopy(void* dest, void* src, size_t count)
 
